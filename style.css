@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background: url('asset/Desktop\ -\ 2.svg') no-repeat;
@@ -11,9 +15,26 @@ h1 {
     text-align: center;
 }
 
-/* .budget-box {
+h2 {
+    text-align: center;
+}
 
-} */
+h3 {
+    color: #000;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+span {
+    color: #046FDB;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 
 .flex {
     display: flex;
@@ -99,10 +120,6 @@ form {
     border: 1px solid red;
     justify-content: space-around;
 
-}
-
-h2 {
-    text-align: center;
 }
 
 .transaction-box {
