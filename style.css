@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -43,7 +44,7 @@ span {
 
 .container {
     width: 1116px;
-    height: 949px;
+    min-height: 949px;
     border-radius: 40px;
     /* border: 1px solid #FFF; */
     background: linear-gradient(121deg, rgba(217, 217, 217, 0.50) -2.93%, rgba(217, 217, 217, 0.20) 100%);
@@ -83,12 +84,11 @@ span {
 
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
 
 }
 
-.left-box,
-.right-box {
+.left-box {
     width: 28.1875rem;
     height: 34.8125rem;
     border-radius: 2.5rem;
@@ -96,6 +96,17 @@ span {
     background: linear-gradient(121deg, rgba(255, 255, 255, 0.50) -2.93%, rgba(255, 255, 255, 0.40) 100%);
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(10px);
+}
+
+.right-box {
+    width: 28.1875rem;
+    min-height: 34.8125rem;
+    border-radius: 2.5rem;
+    /* border: 1px solid #FFF; */
+    background: linear-gradient(121deg, rgba(255, 255, 255, 0.50) -2.93%, rgba(255, 255, 255, 0.40) 100%);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
 }
 
 .left-box {
@@ -166,4 +177,74 @@ form {
 
 button {
     display: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text],
+input[type=number],
+input[type=date] {
+    /* width: 100%; */
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    background: linear-gradient(121deg, rgba(255, 255, 255, 0.50) -2.93%, rgba(255, 255, 255, 0.40) 100%);
+    display: inline-block;
+
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=date]:focus {
+    background-color: lightblue;
+    border: none;
+    outline: none;
+}
+
+::placeholder {
+    color: #046FDB;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    /* opacity: 1; Firefox */
+}
+
+#date {
+    padding: 0 1rem ;
+    /* color: #046FDB;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; */
+}
+
+#date::placeholder {
+    padding: 0 ;
+}
+
+
+input[type=submit] {
+    width: 18.125rem;
+    height: 3.125rem;
+    border-radius: 2.5rem;
+    border: 1px solid #046FDB;
+    background: #046FDB;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+input[type=submit]:hover {
+    background: #0354a4;
 }
