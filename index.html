@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <section class="budget-box">
@@ -13,47 +15,114 @@
         <div class="flex">
             <div class="container">
 
-          
-            <div class="top-box">
-                <div class="income-box">
 
-                    <div class="top-content">
-                        <div class="logo"><img src="asset/income.png" alt=""></div>
-                        <h3>Income</h3>
-                        <span>฿12000</span>
+                <div class="top-box">
+                    <div class="income-box">
+
+                        <div class="top-content">
+                            <div class="logo"><img src="asset/income.png" alt=""></div>
+                            <h3>Income</h3>
+                            <span>฿12000</span>
+                        </div>
+                    </div>
+
+                    <div class="expense-box">
+                        <div class="top-content">
+                            <div class="logo"><img src="asset/spending.png" alt=""></div>
+                            <h3>Expense</h3>
+                            <span>฿12000</span>
+                        </div>
+                    </div>
+
+                    <div class="balance-box">
+                        <div class="top-content">
+                            <div class="logo"><img src="asset/balance-sheet.png" alt=""></div>
+                            <h3>Balance</h3>
+                            <span>฿12000</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="expense-box">
-                    <div class="top-content">
-                        <div class="logo"><img src="asset/spending.png" alt=""></div>
-                        <h3>Expense</h3>
-                        <span>฿12000</span>
+                <div class="buttom-box">
+                    <div class="left-box">
+                        <div class="buttom-content">
+                            <h2>Add Transaction</h2>
+
+                            <form action="#">
+                           
+                                <label for="toggle-1" class="toggle-1">
+                                    <input type="checkbox" name="toggle-1" id="toggle-1" class="toggle-1__input">
+                                    <span class="toggle-1__butto"></span>
+                                </label>
+
+                                <input type="text" id="name" name="name" placeholder="Name">
+
+
+                                <input type="number" id="amoung" name="amoung" placeholder="Amoung">
+
+                                <input type="date" id="date" name="date" />
+
+                                <input type="submit" value="Submit">
+                           
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                    <div class="right-box">
+                        <div class="buttom-content">
+                            <h2>Transaction</h2>
+                            <div class="transaction-box ">
+                                <div class="heading">
+                                     <div class="title">Salary</div>
+                                    <div class="date">12/02/2566</div>
+                                </div>
+
+                                <div class="amoung income">+12,000.00</div>
+                                <button> Delete</button>
+                            </div>
+                            
+                            <div class="transaction-box expense">
+                                <div class="heading">
+                                     <div class="title">Hair Cut</div>
+                                    <div class="date">15/02/2566</div>
+                                </div>
+
+                                <div class="amoung expense">-5000.00</div>
+                                <button> Delete</button>
+                            </div>
+                            
+                            <div class="transaction-box ">
+                                <div class="heading">
+                                     <div class="title">Hair Cut</div>
+                                    <div class="date">15/02/2566</div>
+                                </div>
+
+                                <div class="amoung expense">-5000.00</div>
+                                <button> Delete</button>
+                            </div>
+
+                            <div class="transaction-box expense">
+                                <div class="heading">
+                                     <div class="title">Hair Cut</div>
+                                    <div class="date">15/02/2566</div>
+                                </div>
+
+                                <div class="amoung expense">-5000.00</div>
+                                <button> Delete</button>
+                            </div>
+                            
+  
+   
+                            
+                        </div>
                     </div>
                 </div>
 
-                <div class="balance-box">
-                    <div class="top-content">
-                        <div class="logo"><img src="asset/balance-sheet.png" alt=""></div>
-                        <h3>Balance</h3>
-                        <span>฿12000</span>
-                    </div>
-                </div>
             </div>
-
-            <div class="buttom-box">
-                <div class="left-box">
-                  
-
-                </div>
-
-                <div class="right-box">
-
-                </div>
-            </div>
-
-        </div>
         </div>
     </section>
 </body>
+
 </html>

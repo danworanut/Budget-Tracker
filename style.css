@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 body {
     background: url('asset/Desktop\ -\ 2.svg') no-repeat;
+    font-family: 'Poppins', sans-serif;
     background-size: cover;
 }
 
 h1 {
     text-align: center;
 }
+
 /* .budget-box {
 
 } */
@@ -40,14 +45,108 @@ h1 {
     background: linear-gradient(121deg, rgba(217, 217, 217, 0.50) -2.93%, rgba(217, 217, 217, 0.20) 100%);
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(10px);
-    
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
+
 .logo img {
     width: 46px;
     height: 46px;
+}
+
+.buttom-box {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.left-box,
+.right-box {
+    width: 28.1875rem;
+    height: 34.8125rem;
+    border-radius: 2.5rem;
+    /* border: 1px solid #FFF; */
+    background: linear-gradient(121deg, rgba(255, 255, 255, 0.50) -2.93%, rgba(255, 255, 255, 0.40) 100%);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10px);
+}
+
+.left-box {
+    border: 1px solid rgb(172, 23, 120);
+}
+
+.buttom-content {
+    height: 100%;
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    justify-content: space-around;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.transaction-box {
+    width: 21.875rem;
+    height: 4.4375rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.date {
+    color: #564D4D;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.amoung {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.income {
+    color: #38817A;
+}
+
+.expense {
+    color: #F06161;
+}
+
+button {
+    display: none;
 }
