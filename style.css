@@ -184,6 +184,90 @@ button {
     justify-content: center;
 }
 
+.switch {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.switch input {
+    appearance: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #1E1E1E;
+    outline: none;
+}
+.switch input::before, .switch input::after {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bolder;
+
+}
+
+.switch input::before {
+    content: "Income";
+    left: 20px;
+}
+
+.switch input::after {
+    content: "Expense";
+    right: 20px;
+}
+
+.switch input:checked {
+    background: orange;
+}
+
+.switch label {
+    z-index: 1;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    border-radius: 20px;
+}
+
+.switch input {
+    transition: 0.25s;
+}
+
+.switch input:checked::after, .switch input:checked::before {
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.switch input:checked+label {
+    left: 10px;
+    right: 100px;
+    background: #1E1E1E;
+    transition: left 0.5s , right 0.4s 0.2s;
+}
+
+.switch input:not(:checked) {
+    background: #1E1E1E;
+    transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before {
+    color: #fff;
+    transition:  color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+    color: #1E1E1E;
+    transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked) +label {
+    left: 100px;
+    right: 10px;
+    background: orange;
+    transition: left 0.4s 0.2s , righht 0.5s , background 0.35s;
+}
+
 input[type=text],
 input[type=number],
 input[type=date] {
@@ -203,17 +287,22 @@ input[type=date]:focus {
     background-color: lightblue;
     border: none;
     outline: none;
+    
 }
 
 ::placeholder {
     color: #046FDB;
-    padding-left: 1rem;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     /* opacity: 1; Firefox */
 }
+
+input {
+    padding-left: 1rem;
+}
+
 
 #date {
     padding: 0 1rem ;
@@ -224,11 +313,6 @@ input[type=date]:focus {
     font-weight: 600;
     line-height: normal; */
 }
-
-#date::placeholder {
-    padding: 0 ;
-}
-
 
 input[type=submit] {
     width: 18.125rem;
