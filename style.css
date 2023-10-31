@@ -14,10 +14,18 @@ body {
 
 h1 {
     text-align: center;
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.64rem;
+    margin: 4rem;
 }
 
 h2 {
     text-align: center;
+    margin: 1rem;
 }
 
 h3 {
@@ -109,14 +117,10 @@ span {
     margin-bottom: 2rem;
 }
 
-.left-box {
-    border: 1px solid rgb(172, 23, 120);
-}
-
 .buttom-content {
     height: 100%;
     width: 100%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +132,7 @@ form {
     width: 80%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: space-around;
 
 }
@@ -186,14 +190,14 @@ button {
 
 .switch {
     position: relative;
-    width: 100%;
+    width: 200px;
     height: 50px;
     border-radius: 25px;
 }
 
 .switch input {
     appearance: none;
-    width: 100%;
+    width: 200px;
     height: 50px;
     border-radius: 25px;
     background: #1E1E1E;
@@ -204,13 +208,17 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-weight: bolder;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 
 }
 
 .switch input::before {
     content: "Income";
     left: 20px;
+    
 }
 
 .switch input::after {
@@ -219,7 +227,7 @@ button {
 }
 
 .switch input:checked {
-    background: orange;
+    background: #38817A;
 }
 
 .switch label {
@@ -234,20 +242,26 @@ button {
     transition: 0.25s;
 }
 
-.switch input:checked::after, .switch input:checked::before {
+.switch input:checked::after{
     color: #fff;
+    transition: color 0.5s;
+    
+} 
+
+.switch input:checked::before {
+    color: #046FDB;
     transition: color 0.5s;
 }
 
 .switch input:checked+label {
     left: 10px;
     right: 100px;
-    background: #1E1E1E;
+    background: #fff;
     transition: left 0.5s , right 0.4s 0.2s;
 }
 
 .switch input:not(:checked) {
-    background: #1E1E1E;
+    background: #F06161;
     transition: background 0.4s;
 }
 
@@ -257,14 +271,15 @@ button {
 }
 
 .switch input:not(:checked)::after {
-    color: #1E1E1E;
+    color: #046FDB;
     transition: color 0.5s 0.2s;
 }
 
 .switch input:not(:checked) +label {
     left: 100px;
     right: 10px;
-    background: orange;
+    background: #fff;
+    border: none;
     transition: left 0.4s 0.2s , righht 0.5s , background 0.35s;
 }
 
