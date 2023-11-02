@@ -1,29 +1,7 @@
 
 
 
-const transactions = [
-    {
-      id: 1,
-      name: "salary",
-      amount: 5000,
-      date: new Date(),
-      type: "income"
-    },
-    {
-      id: 2,
-      name: "haircut",
-      amount: 500,
-      date: new Date(),
-      type: "expense"
-    },
-    {
-      id: 3,
-      name: "cenema",
-      amount: 500,
-      date: new Date(),
-      type: 'expense'
-    }
-  ];
+const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
   
   function createTransactionElement() {
     const list = document.getElementById("transaction-list")
@@ -64,7 +42,8 @@ const transactions = [
   
     updateIncome(); 
   }
-  
+
+  saveTransactions()
   createTransactionElement();
 
   function updateIncome() {
@@ -113,5 +92,11 @@ const transactions = [
       this.reset();
   
       createTransactionElement();
+      saveTransactions();
       updateIncome();
+  }
+
+  function saveTransactions() {
+    transactions.sort((a, b) => new Date(b.date) - new Date(a.date))
+    localStorage.setItem('transactions', JSON.stringify(transactions) )
   }

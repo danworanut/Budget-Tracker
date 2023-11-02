@@ -54,7 +54,6 @@ span {
     width: 1116px;
     min-height: 949px;
     border-radius: 40px;
-    /* border: 1px solid #FFF; */
     background: linear-gradient(121deg, rgba(217, 217, 217, 0.50) -2.93%, rgba(217, 217, 217, 0.20) 100%);
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(10px);
@@ -120,7 +119,6 @@ span {
 .buttom-content {
     height: 100%;
     width: 100%;
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,21 +185,21 @@ button {
     /* position: absolute;
     top: 0;
     right: 0; */
-  
-   
-   background: rgb(206, 73, 21);
-   border: none;
-   padding: 0.5rem;
-   color: #ccc;
-} 
 
-.transaction-box:hover button{
+
+    background: rgb(206, 73, 21);
+    border: none;
+    padding: 0.5rem;
+    color: #ccc;
+}
+
+.transaction-box:hover button {
     display: block;
 
     transition: all 300ms;
-   transform-origin: right;  
-   }
-   
+    transform-origin: right;
+}
+
 
 
 .flex {
@@ -224,7 +222,9 @@ button {
     background: #1E1E1E;
     outline: none;
 }
-.switch input::before, .switch input::after {
+
+.switch input::before,
+.switch input::after {
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -239,7 +239,7 @@ button {
 .switch input::before {
     content: "Income";
     left: 20px;
-    
+
 }
 
 .switch input::after {
@@ -263,11 +263,11 @@ button {
     transition: 0.25s;
 }
 
-.switch input:checked::after{
+.switch input:checked::after {
     color: #fff;
     transition: color 0.5s;
-    
-} 
+
+}
 
 .switch input:checked::before {
     color: #046FDB;
@@ -278,7 +278,7 @@ button {
     left: 10px;
     right: 100px;
     background: #fff;
-    transition: left 0.5s , right 0.4s 0.2s;
+    transition: left 0.5s, right 0.4s 0.2s;
 }
 
 .switch input:not(:checked) {
@@ -288,7 +288,7 @@ button {
 
 .switch input:not(:checked)::before {
     color: #fff;
-    transition:  color 0.5s;
+    transition: color 0.5s;
 }
 
 .switch input:not(:checked)::after {
@@ -296,12 +296,12 @@ button {
     transition: color 0.5s 0.2s;
 }
 
-.switch input:not(:checked) +label {
+.switch input:not(:checked)+label {
     left: 100px;
     right: 10px;
     background: #fff;
     border: none;
-    transition: left 0.4s 0.2s , righht 0.5s , background 0.35s;
+    transition: left 0.4s 0.2s, righht 0.5s, background 0.35s;
 }
 
 input[type=text],
@@ -323,7 +323,7 @@ input[type=date]:focus {
     background-color: lightblue;
     border: none;
     outline: none;
-    
+
 }
 
 ::placeholder {
@@ -341,7 +341,7 @@ input {
 
 
 #date {
-    padding: 0 1rem ;
+    padding: 0 1rem;
     /* color: #046FDB;
     padding-left: 1rem;
     font-size: 1rem;
@@ -368,3 +368,128 @@ input[type=submit] {
 input[type=submit]:hover {
     background: #0354a4;
 }
+
+@media only screen and (max-width: 1020px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .top-box {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .top-content {
+        max-width: 12rem;
+       
+    }
+   
+    .buttom-box {
+        gap: 1rem;
+    }
+    .left-box {
+        width: 90%;
+    }
+
+    .right-box {
+        width: 90%;
+    }
+
+
+    .buttom-content {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .transaction-box {
+        width: 300px;
+        border: 1px solid #F06161;
+    }
+
+    button {
+        display: none;
+        height: 100%;
+    }
+    
+    .transaction-box:hover button {
+        display: block;
+        transition: all 300ms;
+        transform-origin: right;
+    }
+
+    
+
+   
+}
+
+/* @media only screen and (max-width: 1020px) {
+    .container {
+        
+    }
+} */
+
+
+
+
+
+
+@media only screen and (max-width: 660px) {
+
+    .container {
+        width: 90%;
+        /* background: transparent; */
+    }
+
+    .top-box {
+        flex-direction: column;
+        border: 1px solid #F06161;
+        gap: 1rem;
+        align-items: center;
+
+    }
+
+    .buttom-box {
+
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+    }
+
+
+    .left-box {
+        width: 90%;
+    }
+
+    .right-box {
+        width: 90%;
+    }
+
+
+    .buttom-content {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .transaction-box {
+        width: 300px;
+    }
+
+    button {
+        display: none;
+        height: 100%;
+    }
+    
+
+    .transaction-box:hover button {
+        display: block;
+        transition: all 300ms;
+        transform-origin: right;
+    }
+
+   
+}
+
