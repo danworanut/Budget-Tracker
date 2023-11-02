@@ -1,13 +1,14 @@
 
 
 
-const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
   
   function createTransactionElement() {
     const list = document.getElementById("transaction-list")
     const status = document.getElementById("status")
     budgetForm.addEventListener('submit', addTransaction)
   
+    transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
   
     list.innerHTML = ""
   
@@ -34,15 +35,16 @@ const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
       <button onclick="myFunction(${id})"> Delete</button>
   </div>`;
   
+
       list.appendChild(transaction_box);
   
   
     })
   
   
-    updateIncome(); 
+    
   }
-
+  updateIncome(); 
   saveTransactions()
   createTransactionElement();
 
@@ -71,7 +73,7 @@ const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
   function myFunction(id) {
     const index = transactions.findIndex((trx) => trx.id === id);
     transactions.splice(index, 1);
-  
+    
     createTransactionElement();
   }
   
@@ -80,12 +82,13 @@ const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
   
       const formData = new FormData(this);
       const type = document.getElementById("switcher") ;
+      const date = document.getElementById("date") ;
   
       transactions.push({
         id: transactions.length +1,
         name: formData.get("name"),
         amount: parseFloat(formData.get("amount")),
-        date: new Date(formData.get("date")),
+        date: date.value ,
         type: type.checked ?  "income" :  "expense"
       })
   
@@ -97,6 +100,5 @@ const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
   }
 
   function saveTransactions() {
-    transactions.sort((a, b) => new Date(b.date) - new Date(a.date))
-    localStorage.setItem('transactions', JSON.stringify(transactions) )
+    localStorage.setItem('transactions', JSON.stringify(transactions) );
   }
