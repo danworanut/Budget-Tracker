@@ -18,27 +18,24 @@
 
                 <div class="top-box">
                     <div class="income-box">
-
                         <div class="top-content">
                             <div class="logo"><img src="asset/income.png" alt=""></div>
                             <h3>Income</h3>
-                            <span>฿12,000</span>
+                            <span id="income-amount">฿12,000</span>
                         </div>
                     </div>
-
                     <div class="expense-box">
                         <div class="top-content">
                             <div class="logo"><img src="asset/spending.png" alt=""></div>
                             <h3>Expense</h3>
-                            <span>฿12,000</span>
+                            <span id="expense-amount">฿12,000</span>
                         </div>
                     </div>
-
                     <div class="balance-box">
                         <div class="top-content">
                             <div class="logo"><img src="asset/balance-sheet.png" alt=""></div>
                             <h3>Balance</h3>
-                            <span>฿12,000</span>
+                            <span id="balance-amount">฿12,000</span>
                         </div>
                     </div>
                 </div>
@@ -48,7 +45,7 @@
                         <div class="buttom-content">
                             <h2>Add Transaction</h2>
 
-                            <form action="#">
+                            <form action="" id="budgetForm">
                            
                                 <div class="flex"><span class="switch">
                                     <input type="checkbox" name="switcher" id="switcher">
@@ -56,10 +53,11 @@
                                 </span>
                             </div>
 
-                                <input type="text" id="name" name="name" placeholder="Name">
+
+                                <input type="text" id="title" name="name" placeholder="Name"  >
 
 
-                                <input type="number" id="amoung" name="amoung"  min="1" placeholder="Amoung">
+                                <input type="number" id="amount" name="amount"  min="0.01" step="0.01" placeholder="Amoung">
 
                                 <input placeholder="Date" type="text" onfocus="(this.type = 'date')"  id="date">
   
@@ -78,7 +76,11 @@
                     <div class="right-box">
                         <div class="buttom-content">
                             <h2>Transaction</h2>
-                            <div class="transaction-box ">
+                            <div id="transaction-list">
+                               
+                            </div>
+                            <div id="status"></div>
+                            <!-- <div class="transaction-box ">
                                 <div class="heading">
                                      <div class="title">Salary</div>
                                     <div class="date">12/02/2566</div>
@@ -173,7 +175,7 @@
 
                                 <div class="amoung expense">-5000.00</div>
                                 <button> Delete</button>
-                            </div>
+                            </div> -->
                             
                         </div>
                     </div>
@@ -182,6 +184,7 @@
             </div>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>

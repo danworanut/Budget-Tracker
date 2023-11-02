@@ -138,6 +138,7 @@ form {
 }
 
 .transaction-box {
+
     width: 21.875rem;
     height: 4.4375rem;
 
@@ -145,9 +146,10 @@ form {
     justify-content: space-between;
 }
 
+
 .title {
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -155,7 +157,7 @@ form {
 
 .date {
     color: #564D4D;
-    font-size: 1rem;
+    font-size: .8rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -165,7 +167,7 @@ form {
     display: flex;
     align-items: center;
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -181,7 +183,26 @@ form {
 
 button {
     display: none;
-}
+    height: 100%;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+  
+   
+   background: rgb(206, 73, 21);
+   border: none;
+   padding: 0.5rem;
+   color: #ccc;
+} 
+
+.transaction-box:hover button{
+    display: block;
+
+    transition: all 300ms;
+   transform-origin: right;  
+   }
+   
+
 
 .flex {
     display: flex;
