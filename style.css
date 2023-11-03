@@ -405,7 +405,6 @@ input[type=submit]:hover {
 
     .transaction-box {
         width: 300px;
-        border: 1px solid #F06161;
     }
 
     button {
@@ -444,7 +443,6 @@ input[type=submit]:hover {
 
     .top-box {
         flex-direction: column;
-        border: 1px solid #F06161;
         gap: 1rem;
         align-items: center;
 
