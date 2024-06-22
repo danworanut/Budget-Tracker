@@ -6,6 +6,7 @@ const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
   function createTransactionElement() {
     const list = document.getElementById("transaction-list")
     const status = document.getElementById("status")
+    
     budgetForm.addEventListener('submit', addTransaction)
   
     //เรียงลำดับจากวันที่ล่าสุดไปสู่วันที่เก่าที่สุด
